@@ -23,50 +23,52 @@
         .raleway {
             font-family: "Raleway", sans-serif;
         }
-        .green{
-            color:#1DD100;
+
+        .green {
+            color: #1DD100;
         }
-.bg{
-    background-color:#1DD100;
-}
-.brc{
-    border-color:#1DD100 ;
-}
+
+        .bg {
+            background-color: #1DD100;
+        }
+
+        .brc {
+            border-color: #1DD100;
+        }
+
+        .txt {
+            font-family: "Inter", sans-serif;
+            color: #03071299;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .h {
+            font-family: "Raleway", sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
     </style>
 </head>
 
 <body>
-    <main>
-
-        <header class="mx-12 mt-5">
-            <!-- navBar -->
-            <nav class="raleway">
-                <div class="navbar bg-base-100">
-                    <div class="navbar-start">
-                        <div class="dropdown">
-                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 6h16M4 12h8m-8 6h16" />
-                                </svg>
-                            </div>
-                            <ul tabindex="0"
-                                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ">
-                                <li><a>Home</a></li>
-                                <li>
-                                    <a>About</a>
-                                </li>
-                                <li><a>Destination</a></li>
-                                <li><a>Search</a></li>
-                            </ul>
+    <header class="mx-12 mt-5">
+        <!-- navBar -->
+        <nav class="raleway">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
                         </div>
-                        <div class=""><img class="w-28 h-12" src="images/web-icon.png" alt="">
-                            <a class="text-2xl font-bold">CitySprint</a>
-                        </div>
-                    </div>
-                    <div class="navbar-center hidden lg:flex">
-                        <ul class="menu menu-horizontal px-1 font-medium text-lg">
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ">
                             <li><a>Home</a></li>
                             <li>
                                 <a>About</a>
@@ -75,64 +77,145 @@
                             <li><a>Search</a></li>
                         </ul>
                     </div>
-                    <div class="navbar-end">
-                        <a class="btn green font-bold text-xl bg-[#1DD1001A] w-32 h-14 border-[#1dd10066]">Bus <img
-                                class="h-7" src="images/bus-icon.png" alt=""></a>
+                    <div class=""><img class="w-28 h-12" src="images/web-icon.png" alt="">
+                        <a class="text-2xl font-bold">CitySprint</a>
                     </div>
                 </div>
-            </nav>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 font-medium text-lg">
+                        <li><a>Home</a></li>
+                        <li>
+                            <a>About</a>
+                        </li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn green font-bold text-xl bg-[#1DD1001A] w-32 h-14 border-[#1dd10066]">Bus <img
+                            class="h-7" src="images/bus-icon.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
 
-            <!-- Banner -->
+        <!-- Banner -->
+        <div>
+            <div style="background-image: url(images/banner.png);"
+                class="hero bg-contain bg-no-repeat rounded-xl h-[700px]">
+                <div class="hero-content text-center">
+                    <div class="max-w-md">
+                        <h1 class="text-5xl font-bold text-white raleway">End-to-End Travel with</h1>
+                        <h1 class="mb-6 text-5xl font-bold green raleway">CitySprint</h1>
+                        <p class="mb-5 font-normal text-lg text-white inter">Embark on unforgettable journeys with us!
+                            Discover comfort, reliability, and adventure on our buses. Your destination awaits – let the
+                            voyage begin with CitySprint.</p>
+                        <button class="btn bg border-[#1DD100] text-xl font-bold raleway">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-evenly relative -top-32">
+
+                <div class="flex gap-3 border-b-[4px] brc rounded-2xl py-7 px-10 bg-white inter">
+                    <img src="images/people.png" alt="">
+                    <div class="">
+                        <h2 class="text-4xl font-bold">500k+</h2>
+                        <p class="text-lg font-normal txt">Registered users</p>
+                    </div>
+
+                </div>
+
+                <div class="flex gap-3 border-b-[4px] brc rounded-lg py-7 px-10 bg-white inter">
+                    <img src="images/ticket-cupon.png" alt="">
+                    <div class="">
+                        <h2 class="text-4xl font-bold">1.7 lacks</h2>
+                        <p class="text-lg font-normal txt">Tickets sold</p>
+                    </div>
+
+                </div>
+
+                <div class="flex gap-3 border-b-[4px] brc rounded-lg py-7 px-10 bg-white inter">
+                    <img src="images/stoppage.png" alt="">
+                    <div class="">
+                        <h2 class="text-4xl font-bold">80k+</h2>
+                        <p class="text-lg font-normal txt">Rental partners</p>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Offers -->
+        <section class="mx-12">
+            <h1 class="h">
+                Best offers for you
+            </h1>
+            <div class="flex justify-center gap-10">
+                
+              <div  class="flex items-center gap-10 bg-[#ffbf0f] px-12 rounded-lg">
+                <div>
+                    <h2 class="h text-left mb-0">15% OFF</h2>
+                    <p class="inter text-xl font-semibold">on your next purchase</p>
+                    <p class="txt">use by January 2024</p>
+                </div>
+                <img src="images/cupon-devider.png" alt="">
+                <div class="text-center">
+                    <h2 class="raleway text-2xl font-bold">
+                        NEWS15
+                    </h2>
+                    <p class="txt">Coupon Code</p>
+                </div>
+              </div>
+
+              <div  class="flex items-center gap-10 bg-[#F78C9C] px-12 rounded-lg">
+                <div>
+                    <h2 class="h text-left mb-0">20% OFF</h2>
+                    <p class="inter text-xl font-semibold">on your next purchase</p>
+                    <p class="txt">use by January 2024</p>
+                </div>
+                <img src="images/cupon-devider.png" alt="">
+                <div class="text-center">
+                    <h2 class="raleway text-2xl font-bold">
+                        Couple 20
+                    </h2>
+                    <p class="txt">Coupon Code</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid justify-center mt-11">
+                <button class="raleway font-bold text-xl green border-[2px] brc p-4 rounded-lg">See All Offers</button></div>
+            
+            
+        </section>
+
+        <!-- Ticket booking -->
+        <section class="mt-20 bg-[#F7F8F8] rounded-t-xl border-t-2 brc p-12">
 <div class="">
-    <div style="background-image: url(images/banner.png);" class="hero bg-contain bg-no-repeat rounded-xl h-[700px]"  >
-        <div class="hero-content text-center">
-          <div class="max-w-md">
-            <h1 class="text-5xl font-bold text-white raleway">End-to-End Travel with</h1>
-            <h1 class="mb-6 text-5xl font-bold green raleway">CitySprint</h1>
-            <p class="mb-5 font-normal text-lg text-white inter">Embark on unforgettable journeys with us! Discover comfort, reliability, and adventure on our buses. Your destination awaits – let the voyage begin with CitySprint.</p>
-            <button class="btn bg border-[#1DD100] text-xl font-bold raleway">Buy Tickets</button>
-          </div>
-        </div>
-      </div>
-      <div class="flex justify-evenly relative -top-24">
-
-        <div class="flex gap-3 border-b-[4px] brc rounded-2xl py-7 px-10 bg-white inter">
-            <img src="images/people.png" alt="">
-            <div class="">
-                <h2 class="text-4xl font-bold">500k+</h2>
-                <p class="text-lg font-normal">Registered users</p>
+    <h1 class="h mb-2">CitySprint</h1>
+<div class="flex justify-center">
+    <p class="txt text-center w-[70%]">Seamless ticket purchase experience: Choose routes, select seats, and secure your journey with our user-friendly online booking platform. Travel hassle-free!</p>
+</div>
+</div>
+<div class="bg-white">
+    <div>
+        <div class="flex gap-4">
+            <img src="images/bus-logo.png" alt="">
+            <div>
+                <h1 class="text-3xl font-bold raleway">Greenline Paribahan</h1>
+                <p class="txt">Coach-009-WEB ! AC_Business</p>
             </div>
-
-        </div>
-       
-        <div class="flex gap-3 border-b-[4px] brc rounded-lg py-7 px-10 bg-white inter">
-            <img src="images/ticket-cupon.png" alt="">
-            <div class="">
-                <h2 class="text-4xl font-bold">1.7 lacks</h2>
-                <p class="text-lg font-normal">Tickets sold</p>
-            </div>
-
-        </div>
-       
-        <div class="flex gap-3 border-b-[4px] brc rounded-lg py-7 px-10 bg-white inter">
-            <img src="images/stoppage.png" alt="">
-            <div class="">
-                <h2 class="text-4xl font-bold">80k+</h2>
-                <p class="text-lg font-normal">Rental partners</p>
-            </div>
-
-        </div>
-       
-
-
         </div>
     </div>
 </div>
-            
-
-        </header>
-
+        </section>
     </main>
+
 </body>
 
 </html>
