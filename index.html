@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CitySprint</title>
-    <link rel="shortcut icon" href="images/main-icon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <!-- Daisy & Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -103,7 +103,7 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a class="btn green font-bold text-xl bg-[#1DD1001A] w-32 h-14 border-[#1dd10066]">Bus<img
+                    <a class="btn green font-bold text-xl bg-[#1DD1001A]  border-[#1dd10066]">Bus<img
                             class="h-7" src="images/bus-icon.png" alt=""></a>
                 </div>
             </div>
@@ -120,7 +120,8 @@
                         <p class="mb-5 font-normal text-lg text-white inter">Embark on unforgettable journeys with us!
                             Discover comfort, reliability, and adventure on our buses. Your destination awaits – let the
                             voyage begin with CitySprint.</p>
-                        <button class="btn bg border-[#1DD100] text-xl font-bold raleway">Buy Tickets</button>
+                        <button id="buyTicket" class="btn bg border-[#1DD100] text-xl font-bold raleway">Buy Tickets</button>
+
                     </div>
                 </div>
             </div>
@@ -207,7 +208,7 @@
         </section>
 
         <!-- Ticket booking -->
-        <section class="mt-20 bg-[#F7F8F8] rounded-t-2xl border-t-2 brc p-12">
+        <section id="ticketBooking" class="mt-20 bg-[#F7F8F8] rounded-t-2xl border-t-2 brc p-12">
             <!-- journey details -->
             <div class="">
                 <h1 class="h mb-2">CitySprint</h1>
@@ -221,19 +222,20 @@
                 <div class="">
                     <div class="flex justify-between">
                         <div class="flex gap-4">
-                            <img src="images/bus-logo.png" alt="">
+                            <img class="h-auto" src="images/bus-logo.png" alt="">
                             <div>
-                                <h1 class="text-3xl font-bold raleway">Greenline Paribahan</h1>
+                                <h1 class="text-3xl font-bold raleway">CitySprint Vista</h1>
                                 <p class="txt">Coach-009-WEB ! AC_Business</p>
                             </div>
                         </div>
-                        <div>
-                            <button class="btn green font-bold text-xl bg-[#1DD1001A] border-[#1dd10066] "><img
-                                    src="images/seat-green.png" alt=""> 40 Seats left</button>
+                        <div class="flex gap-2 items-center px-6 green font-bold text-xl bg-[#1DD1001A] green rounded-xl">
+                            <img class="h-8"
+                                    src="images/seat-green.png" alt=""> 
+                            <p class="w-full">40 Seats left</p>
                         </div>
                     </div>
 
-                    <div class="bg-[#F7F8F8] rounded-xl mt-4 p-6">
+                    <div class="bg-[#F7F8F8] rounded-xl mt-3 p-5">
 
                         <div class="flex justify-between ">
                             <p class="txt raleway">Route</p>
@@ -247,7 +249,7 @@
                         </div><br>
                         <hr class="border-dashed border-[#03071233] border-2"><br>
 
-                        <div class="flex justify-between">
+                        <div class="flex justify-between gap-4">
                             <p class="txt p-4 rounded-xl raleway text-black bg-[#03071205] ">Boarding Point - Laxmipur
                             </p>
 
@@ -261,7 +263,7 @@
 
                 </div>
                 <div>
-                    <img src="images/info-devider.png" alt="">
+                    <img class="max-h-fit" src="images/info-devider.png" alt="">
                 </div>
 
                 <div class="pr-6">
@@ -275,7 +277,7 @@
             </div>
             <br>
             <!-- seat & ticket details -->
-            <div class="bg-white p-8 grid grid-cols-2 ">
+            <div  class="bg-white p-8 grid grid-cols-2 ">
 
                 <!-- seat details -->
                 <div class="mr-20">
@@ -321,7 +323,7 @@
                             </div>
 
                             <div class="grid grid-cols-2 gap-6">
-                                <button class="btn btxt">A1</button>
+                                <button class="btn btxt w-24">A1</button>
                                 <button class="btn btxt">A2</button>
                                 <button class="btn btxt">B1</button>
                                 <button class="btn btxt">B2</button>
@@ -345,7 +347,7 @@
                         </div>
 
                         <div class="grid grid-cols-2 gap-6">
-                            <button class="btn btxt">A3</button>
+                            <button class="btn btxt w-24">A3</button>
                             <button class="btn btxt">A4</button>
                             <button class="btn btxt">B3</button>
                             <button class="btn btxt">B4</button>
@@ -369,9 +371,6 @@
                     </div>
                 </div>
 
-                <!-- divider -->
-
-                <!-- <div class="border-l-4 border-dashed"></div> -->
 
                 <!-- ticket derails -->
                 <div class="border-l-4 border-dashed pl-12 -ml-8">
@@ -391,10 +390,12 @@
                         <br>
                         <hr class="border-dashed border-[#03071233] border-2"><br>
 
-                        <div class="flex justify-between">
-                            <p class="btxt">A2</p>
-                            <p class="btxt">Economy</p>
-                            <p class="btxt">550</p>
+                        <div>
+                            <ul class="hidden">
+                                <li class="flex justify-between"><p class="btxt">A2</p>
+                                    <p class="btxt">Economy</p>
+                                    <p class="btxt">550</p></li>
+                            </ul>
                         </div>
                         <br>
                         <hr class="border-[#03071233] border-2"><br>
@@ -406,9 +407,9 @@
                         <br>
 
                         <div class="bg-white flex justify-between gap-2 rounded-xl">
-                            <input class="w-full" type="text">
+                            <input class="input input-bordered w-full p-3 rounded-xl border-0" type="text" placeholder="Enter your coupon code here">
                             <button disabled
-                                class="bg btn text-white text-sm font-semibold p-2 rounded-xl">Apply</button>
+                                class="bg btn text-white text-sm font-semibold py-2 px-6 rounded-xl">Apply</button>
                         </div>
                         <br>
                         <div class="flex justify-between">
@@ -457,15 +458,15 @@
     <p class="txt text-gray-300 w-[40%] mt-2">Embark on unforgettable journeys with us – where comfort meets adventure, creating timeless travel memories.</p>
 </div>
 
-<div>
+<div class="mt-8">
     <h2 class="raleway font-semibold text-base text-gray-200 text-center">Download our app</h2>
     <div>
-        <img class="w-56" src="images/download-apps.png" alt="">
+        <a href="#"><img class="w-56" src="images/download-apps.png" alt=""></a>
     </div>
 </div>
 
         </div><br><br>
-        <hr class="border-dashed border-gray-600 border-2"><br>
+        <hr class="border-dashed border-gray-600 border-1"><br>
         <div class="flex justify-between">
             <p class="txt text-gray-300 text-sm">@all rights reserved, P-Ticket services limited.2024</p>
         
@@ -478,6 +479,7 @@
     </div>
     </footer>
 
+    <script src="index.js"></script>
 </body>
 
 </html>
