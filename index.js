@@ -1,7 +1,7 @@
 const buyTicket = document.getElementById('buyTicket');
 const ticketBooking = document.getElementById('ticketBooking');
-buyTicket.addEventListener('click', function(){
-    ticketBooking.scrollIntoView({behavior: 'smooth', block: 'start'});
+buyTicket.addEventListener('click', function () {
+    ticketBooking.scrollIntoView({ behavior: 'smooth', block: 'start' });
 })
 
 
@@ -32,30 +32,30 @@ const seats = document.getElementsByClassName('seats');
 
 
 
-for(let seat of seats){
-    seat.addEventListener('click', function(){
+for (let seat of seats) {
+    seat.addEventListener('click', function () {
         totalSelectedSeat += 1;
-        if(totalSelectedSeat > 4){
-           return alert('Only 4 seats can be selected at once!')
+        if (totalSelectedSeat > 4) {
+            return alert('Only 4 seats can be selected at once!')
         }
-        if(totalSelectedSeat == 4){
-apply.removeAttribute('disabled', 'disabled')
+        if (totalSelectedSeat == 4) {
+            apply.removeAttribute('disabled', 'disabled')
         }
         const seatList = document.getElementById('seatList');
         let li = document.createElement('li');
-let p1 = document.createElement('p');
-let p2 = document.createElement('p');
-let p3 = document.createElement('p');
-li.classList.add('flex', 'justify-between', 'btxt');
+        let p1 = document.createElement('p');
+        let p2 = document.createElement('p');
+        let p3 = document.createElement('p');
+        li.classList.add('flex', 'justify-between', 'btxt');
 
-seatList.appendChild(li);
-p1.innerText = seat.innerText;
-p2.innerText = 'Economy';
-p3.innerText = '550';
+        seatList.appendChild(li);
+        p1.innerText = seat.innerText;
+        p2.innerText = 'Economy';
+        p3.innerText = '550';
 
-li.appendChild(p1);
-li.appendChild(p2);
-li.appendChild(p3);
+        li.appendChild(p1);
+        li.appendChild(p2);
+        li.appendChild(p3);
 
         seat.classList.remove('btn');
         seat.classList.add('bg', 'rounded-lg', 'h-12');
@@ -64,7 +64,7 @@ li.appendChild(p3);
         price += 550;
         finalPrice += 550;
         seatLeft.innerText = availableSeat;
-        selectedSeat.innerText =  totalSelectedSeat;
+        selectedSeat.innerText = totalSelectedSeat;
         totalPrice.innerText = price;
         grandPrice.innerText = finalPrice;
     })
@@ -72,21 +72,25 @@ li.appendChild(p3);
 
 
 
-apply.addEventListener('click', function(){
-if(coupon.value == off15.innerText){
-    finalPrice = finalPrice - (finalPrice * 15 / 100);
-    grandPrice.innerText = finalPrice;
-    apply.setAttribute('disabled', 'disabled');
-}
-else if(coupon.value == off20.innerText){
-    finalPrice = finalPrice - (finalPrice * 20 / 100);
-    grandPrice.innerText = finalPrice;
-    apply.setAttribute('disabled', 'disabled');
-}
+apply.addEventListener('click', function () {
+    if (coupon.value == off15.innerText) {
+        finalPrice = finalPrice - (finalPrice * 15 / 100);
+        grandPrice.innerText = finalPrice;
+        apply.setAttribute('disabled', 'disabled');
+        coupon.setAttribute('placeholder', 'NWE15');
+        coupon.setAttribute('disabled', 'disabled');
+    }
+    else if (coupon.value == off20.innerText) {
+        finalPrice = finalPrice - (finalPrice * 20 / 100);
+        grandPrice.innerText = finalPrice;
+        apply.setAttribute('disabled', 'disabled');
+        coupon.setAttribute('placeholder', 'Couple 20');
+        coupon.setAttribute('disabled', 'disabled');
+    }
 
-else{
-    return alert("Coupon doesn't exist!")
-}
+    else {
+        return alert("Coupon doesn't exist!")
+    }
 })
 
 const pName = document.getElementById('pName');
@@ -101,24 +105,32 @@ const bookingForm = document.getElementById('bookingForm');
 const main = document.getElementById('main');
 const ticketBooked = document.getElementById('ticketBooked');
 
-bookingForm.addEventListener('input', function(){
-    if(pName.value !== '' && pNumber.value !== ''){
+bookingForm.addEventListener('input', function () {
+    if (pName.value !== '' && pNumber.value !== '') {
 
 
         nextBtn.removeAttribute('disabled', 'disabled');
-        nextBtn.addEventListener('click', function(){
-            if((pNumber.value).length < 2){
-                return alert('Please enter the correct phone number.')};
-        main.classList.add('hidden');
-        ticketBooked.classList.remove('hidden');
-        })
-     }
+        
+    }
+
+})
+nextBtn.addEventListener('click', function () {
+    if ((pNumber.value).length < 2 || isNaN(pNumber.value)) {
+        return alert('Please enter the correct phone number.')
+    };
+
+       if (finalPrice <= 0) {
+        return alert('You did not select any seat.')
+       };
+        
+       main.classList.add('hidden');
+       ticketBooked.classList.remove('hidden');
 })
 
 const continueBtn = document.getElementById('continueBtn');
 
-continueBtn.addEventListener('click', function(){
-location.reload();
+continueBtn.addEventListener('click', function () {
+    location.reload();
 })
 
 
