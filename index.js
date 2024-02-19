@@ -105,23 +105,21 @@ const bookingForm = document.getElementById('bookingForm');
 const main = document.getElementById('main');
 const ticketBooked = document.getElementById('ticketBooked');
 
-bookingForm.addEventListener('input', function () {
-    if (pName.value !== '' && pNumber.value !== '') {
-
-
+pNumber.addEventListener('input', function () {
+    if (pNumber.value !== '' && finalPrice >= 550) {
         nextBtn.removeAttribute('disabled', 'disabled');
-        
     }
-
+    else{
+        pNumber.value = '';
+    return alert('First select your seat and enter your [hone number again to continue.')
+    }
 })
 nextBtn.addEventListener('click', function () {
     if ((pNumber.value).length < 2 || isNaN(pNumber.value)) {
-        return alert('Please enter the correct phone number.')
+        
+        return alert('Please enter the correct phone number to continue.')
     };
 
-       if (finalPrice <= 0) {
-        return alert('You did not select any seat.')
-       };
         
        main.classList.add('hidden');
        ticketBooked.classList.remove('hidden');
