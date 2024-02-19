@@ -111,7 +111,7 @@ pNumber.addEventListener('input', function () {
     }
     else{
         pNumber.value = '';
-    return alert('First select your seat and enter your [hone number again to continue.')
+    return alert('First select your seat and enter your phone number again to continue.')
     }
 })
 nextBtn.addEventListener('click', function () {
