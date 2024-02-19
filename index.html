@@ -13,9 +13,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Protest+Riot&di&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <style>
+.logo{
+    font-family: "Protest Riot", sans-serif;
+}
+
         .inter {
             font-family: "Inter", sans-serif;
         }
@@ -85,7 +89,7 @@
                         </ul>
                     </div>
                     <div class=""><img class="w-28 h-12" src="images/web-icon.png" alt="">
-                        <a class="text-2xl font-bold">CitySprint</a>
+                        <a class="text-2xl logo">CitySprint</a>
                     </div>
                 </div>
                 <div class="navbar-center hidden lg:flex">
@@ -271,10 +275,10 @@
             </div>
             <br>
             <!-- seat & ticket details -->
-            <div class="bg-white p-8">
+            <div class="bg-white p-8 grid grid-cols-2 ">
 
                 <!-- seat details -->
-                <div>
+                <div class="mr-20">
                     <div>
                         <h3 class="raleway text-2xl font-semibold">
                             Select Your Seat
@@ -286,22 +290,22 @@
                             <img src="images/seat-gray.png" alt="">
                             <p class="text-[#03071280] inter text-lg font-medium">Available</p>
                         </div>
-    
-    
+
+
                         <div class="flex gap-2">
                             <img src="images/seat-green-filled.png" alt="">
                             <p class="green inter text-lg font-medium">Selected</p>
                         </div>
                     </div><br>
                     <hr class="border-dashed border-[#03071233] border-2"><br>
-    
+
                     <div class="flex justify-end mb-6">
                         <div class="bg-gray-200 rounded-xl w-fit"><img class="w-20 py-2 px-6"
                                 src="images/steering-wheel.png" alt=""></div>
                     </div>
-    
+
                     <div class="flex justify-between">
-    
+
                         <div class="flex gap-4">
                             <div class="grid grid-cols-1 gap-9 mt-2">
                                 <p class="btxt">A</p>
@@ -315,7 +319,7 @@
                                 <p class="btxt">I</p>
                                 <p class="btxt">J</p>
                             </div>
-    
+
                             <div class="grid grid-cols-2 gap-6">
                                 <button class="btn btxt">A1</button>
                                 <button class="btn btxt">A2</button>
@@ -339,7 +343,7 @@
                                 <button class="btn btxt">J2</button>
                             </div>
                         </div>
-    
+
                         <div class="grid grid-cols-2 gap-6">
                             <button class="btn btxt">A3</button>
                             <button class="btn btxt">A4</button>
@@ -365,10 +369,114 @@
                     </div>
                 </div>
 
+                <!-- divider -->
+
+                <!-- <div class="border-l-4 border-dashed"></div> -->
+
                 <!-- ticket derails -->
+                <div class="border-l-4 border-dashed pl-12 -ml-8">
+                    <div>
+                        <h3 class="raleway text-2xl font-semibold">
+                            Select Your Seat
+                        </h3>
+                    </div><br>
+                    <hr class="border-dashed border-[#03071233] border-2"><br>
+                    <div class="bg-[#F7F8F8] rounded-xl px-8 py-6">
+                        <div class="flex justify-between">
+                            <h4 class="inter font-semibold text-lg">Seat<sup
+                                    class="bg text-white px-2 rounded-md">0</sup></h4>
+                            <h4 class="inter font-semibold text-lg">Class</h4>
+                            <h4 class="inter font-semibold text-lg">Price</h4>
+                        </div>
+                        <br>
+                        <hr class="border-dashed border-[#03071233] border-2"><br>
+
+                        <div class="flex justify-between">
+                            <p class="btxt">A2</p>
+                            <p class="btxt">Economy</p>
+                            <p class="btxt">550</p>
+                        </div>
+                        <br>
+                        <hr class="border-[#03071233] border-2"><br>
+
+                        <div class="flex justify-between">
+                            <h2 class="inter font-semibold text-lg">Total Price</h2>
+                            <h2 class="inter font-semibold text-lg">BDT<span>00</span></h2>
+                        </div>
+                        <br>
+
+                        <div class="bg-white flex justify-between gap-2 rounded-xl">
+                            <input class="w-full" type="text">
+                            <button disabled
+                                class="bg btn text-white text-sm font-semibold p-2 rounded-xl">Apply</button>
+                        </div>
+                        <br>
+                        <div class="flex justify-between">
+                            <h2 class="inter font-semibold text-lg">Grand Total</h2>
+                            <h2 class="inter font-semibold text-lg">BDT<span>00</span></h2>
+                        </div>
+                        
+
+                    </div>
+                    <div>
+                        <br>
+                        <form action="form" class="inter font-semibold text-base">
+                            <label for="pName">Passenger Name*</label><br>
+                            <input id="pName" class="text-sm text-gray-500 input input-bordered w-full p-3 rounded-xl border-[#03071233] border-1" type="text" required
+                                placeholder="Enter your name">
+                                <br><br>
+
+                            <label for="pNumber">Phone Number*</label><br>
+                            <input id="pNumber" class="text-sm text-gray-500 input input-bordered w-full p-3 rounded-xl border-[#03071233] border-1" type="text" required
+                                placeholder="Enter your phone number">
+                                <br><br>
+
+                            <label for="pMail">Email ID</label><br>
+                            <input id="pName" class="text-sm text-gray-500 input input-bordered w-full p-3 rounded-xl border-[#03071233] border-1" type="email" placeholder="Enter your email id">
+                                <br><br>
+                                <button disabled class="btn w-full h-full bg text-white text-lg font-bold py-4">Next</button>
+                        </form>
+
+                        <div class="flex justify-around mt-8">
+                            <a class="txt underline" href="#">Terms and Conditions</a>
+                            <a class="txt underline" href="#">Cancellation Policy</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+
+    <footer class="bg-[#030712] p-12">
+        <div  class="flex justify-between items-center">
+
+<div>
+    <div class=""><img class="w-28 h-12" src="images/web-icon.png" alt="">
+        <a class="text-2xl font-bold text-gray-200 logo">CitySprint</a>
+    </div>
+    <p class="txt text-gray-300 w-[40%] mt-2">Embark on unforgettable journeys with us – where comfort meets adventure, creating timeless travel memories.</p>
+</div>
+
+<div>
+    <h2 class="raleway font-semibold text-base text-gray-200 text-center">Download our app</h2>
+    <div>
+        <img class="w-56" src="images/download-apps.png" alt="">
+    </div>
+</div>
+
+        </div><br><br>
+        <hr class="border-dashed border-gray-600 border-2"><br>
+        <div class="flex justify-between">
+            <p class="txt text-gray-300 text-sm">@all rights reserved, P-Ticket services limited.2024</p>
+        
+        <div class="txt text-gray-300 text-sm flex gap-6">
+            <a href="#">Terms & condition</a>
+            <a href="#">Return & refund policy</a>
+            <a href="#">Privacy policy</a>
+
+        </div>
+    </div>
+    </footer>
 
 </body>
 
